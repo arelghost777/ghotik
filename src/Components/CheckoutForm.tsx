@@ -1,5 +1,5 @@
 export default function CheckoutForm() {
-  const handleSubmit=(e)=>{
+  const handleSubmit=(e: { preventDefault: () => void; })=>{
     e.preventDefault()
   }
   

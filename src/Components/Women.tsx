@@ -5,7 +5,7 @@ import useProducts from './hooks/useProducts';
 import { useCart } from './hooks/useCart';
 
 function Women() {
-  const  addToCart  = useCart()
+  const { addToCart } = useCart()
   const { products, error, loading } = useProducts("products/category/women's clothing");
 
   const retryFetch = () => {
