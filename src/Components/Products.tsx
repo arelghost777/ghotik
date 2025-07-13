@@ -2,7 +2,7 @@ import type {Product} from '@/CartContext'
 import { Button } from '@/components/ui/button';
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { ShoppingBasket } from 'lucide-react';
+import { ShoppingBasket, Star, StarHalfIcon, StarIcon, StarOff } from 'lucide-react';
 
 interface ProductsProps {
   products: Product[];
@@ -36,11 +36,11 @@ export default function Products({products, addToCart}:ProductsProps){
                         {Array.from({ length: 5 }, (_, i) => {
                           const ratingValue = product.rating.rate;
                           if (ratingValue >= i + 1) {
-                            return <i key={i} className="fa-solid fa-star" />;
+                            return <StarIcon key={i} className="h-5" fill="currentColor" stroke="none" />;
                           } else if (ratingValue >= i + 0.5) {
-                            return <i key={i} className="fa-solid fa-star-half-stroke" />;
+                            return <StarHalfIcon key={i} className="h-5" fill="currentColor" stroke="none"/>;
                           } else {
-                            return <i key={i} className="fa-regular fa-star" />;
+                            return <StarIcon key={i} className="h-5" strokeWidth={1}/>;
                           }
                         })}
                       </p>
