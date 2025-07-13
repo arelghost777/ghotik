@@ -2,7 +2,7 @@ import type {Product} from '@/CartContext'
 import { Button } from '@/components/ui/button';
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { ShoppingBasket, Star, StarHalfIcon, StarIcon, StarOff } from 'lucide-react';
+import { ShoppingBasket, StarHalfIcon, StarIcon } from 'lucide-react';
 
 interface ProductsProps {
   products: Product[];
